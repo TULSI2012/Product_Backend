@@ -9,12 +9,12 @@ app.use(express.json({ limit: "10kb" }));
 app.use(express.urlencoded({ extended: true, limit: "10kb" }));
 app.use(
   cors({
-    origin: "http://localhost:5173/",
+    origin: "http://localhost:5173",
   })
 )
 
 // ROUTES
-app.use("/product", productRouters);
+app.use("/products", productRouters);
 
 
 export default app;
